@@ -25,6 +25,21 @@ Files
 * pendigits_label_train.csv: class labels of training instances.
 * pendigits_label_test.csv: class labels of test instances.
 
+Manipulation
+------------
+
+There's a python script in there to combine the inputs and targets into a json file.
+
+Example Usage:
+* To get sta16 representation of training data into a file named data.json
+```
+python combine.py --representation sta16 --type train > data.json
+```
+* To get sta4 representation of test data into a file named data.json
+```
+python combine.py --representation sta4 --type test > data.json
+```
+
 Alternative sources
 -------------------
 The dyn representation can also be downloaded from the UCI Machine Learning Repository (http://archive.ics.uci.edu/ml/datasets/Pen-Based+Recognition+of+Handwritten+Digits). [alimoglu97icdar] Alimoglu, F., & Alpaydin E. (1997).  Combining Multiple Representations and Classifiers for Pen-based Handwritten Digit Recognition. Fourth International Conference on Document Analysis and Recognition (ICDAR 97). [demir05prl] Demir, C., & Alpaydin E. (2005).  Cost-Conscious Classifier Ensembles. Pattern Recognition Letters. 26(14), 2206-2214.  [gonen10prl] Gonen, M., & Alpaydin E. (2010).  Cost-Conscious Multiple Kernel Learning. Pattern Recognition Letters. 31(9), 959-965.
